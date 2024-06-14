@@ -18,7 +18,7 @@ const RightSideNav = () => {
                 </button>
             </div>
             <div className="mb-5">
-                <h2 className="text-2xl font-bold">Find us on</h2> 
+                <h2 className="text-2xl font-bold mb-2">Find us on</h2> 
                 <a className="flex items-center text-xl border-2 p-4 rounded-t-lg" href="">
                     <FaFacebook className="mr-2"></FaFacebook>
                     Facebook
