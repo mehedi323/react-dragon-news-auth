@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../Sheard/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
@@ -6,6 +6,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
     const {userLogin}= useContext(AuthContext);
+    const navigate = useNavigate();
     const handleUserLogin = e =>{
         e.preventDefault()
         const email = e.target.email.value;
@@ -14,7 +15,8 @@ const Login = () => {
 
         userLogin(email, password)
         .then(result=>{
-            console.log(result.user)
+            console.log(result.user);
+            navigate('/')
         })
         .then(error=>{
             console.error(error);
